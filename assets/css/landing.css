@@ -1,9 +1,8 @@
 
 body {
-    background-color: #000;
+    background-color: '#FEFFFD';
     color: white;
     overflow-x: hidden;
-    padding-top: 4rem
 }
 
 .background-container {
@@ -11,6 +10,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    padding-top: 80px;
 }
 
 .background-image {
@@ -163,7 +163,7 @@ body {
 }
 
 .container-join {
-    background-color: #fff;
+    background-color: #FEFFFD;
     color: #333;
     overflow-x: hidden;
     padding: 0px 0px 40px 0px;
@@ -346,4 +346,405 @@ body {
 
 .cta-join:hover {
     background-color: #007a7a;
+}
+
+.section-about {
+    background-color: #FEFFFD;
+    color: #005a5a;
+}
+.why-saresa-section {
+    max-width: 100%;
+    margin: 50px auto 0;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title-small {
+    font-size: 24px;
+    color: #005057;
+    margin-bottom: 10px;
+}
+
+.title-large {
+    font-size: 64px;
+    font-weight: bold;
+    color: #005057;
+    position: relative;
+    display: inline-block;
+}
+
+.title-large::after {
+    content: "?";
+    color: #005057;
+}
+
+.highlight {
+    background-color: #c5ff00;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+.benefits-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.benefit-1 {
+    max-width: 33%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80%;
+}
+.benefit-2 {
+    max-width: 33%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 35%;
+}
+.benefit-3 {
+    max-width: 33%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0%;
+    top: 80%;
+}
+
+.benefit-icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #005a5a;
+}
+
+.benefit-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #005a5a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.broccoli-container {
+    position: relative;
+    height: 700px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.broccoli-image {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+}
+.body-slogan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: #f5f5f5;
+
+}
+.slogan-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left, .right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+.left {
+    background: url('/assets/image/slogan-left.png') center/cover;
+}
+
+.right {
+    background: url('/assets/image/slogan-right.png') center/cover;
+    position: relative;
+}
+.left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 64, 64, 0.6);
+}
+
+.logo-slogan {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    fill: white;
+}
+
+.text-slogan {
+    position: absolute;
+    color: white;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    max-width: 27%;
+    text-align: left;
+}
+
+.text-slogan span {
+    color: #E0FE08;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.right p {
+    font-size: 30px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.container-mitra{
+    height: 600px;
+    text-align: center;
+    background-color: #fff;
+    padding: 80px;
+}
+.container-mitra h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #005057;
+    margin-bottom: 70px;
+}
+.mitra-first {
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+.mitra-seccond {
+    display: flex;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 150px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+}
+.img-mitra {
+    width: 120px;
+}
+
+.newsletter-section {
+    background-color: #005057;
+    color: white;
+    padding: 40px 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.newsletter-text {
+    max-width: 600px;
+}
+
+.newsletter-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletter-description {
+    font-size: 16px;
+    color: rgba(255,255,255,0.8);
+}
+
+.join-button {
+    background-color: #005057;
+    color: #E0FE08;
+    border: 2;
+    border-color: #E0FE08;
+    padding: 15px 60px;
+    border-radius: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.text-btn-join {
+    text-align: center;
+}
+
+.newsletter-footer {
+    background-image: url('/assets/image/footerbg.png');
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+    padding: 30px 0;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-mission {
+    max-width: 400px;
+}
+
+.footer-mission-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-mission-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+}
+.logo-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 80px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.footer-navigation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.footer-navigation h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.footer-navigation a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-navigation a:hover {
+    color: #c5ff00;
+}
+
+.footer-contact {
+    text-align: right;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 10px;
+}
+.footer-contact p{
+    font-size: 20px;
+}
+.email-circle {
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copyright {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    font-size: 12px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .benefits-container {
+        flex-direction: column;
+    }
+    
+    .benefit {
+        margin-bottom: 30px;
+    }
+    
+    .title-large {
+        font-size: 48px;
+    }
+    
+    .broccoli-image {
+        width: 100%;
+    }
+
 }
