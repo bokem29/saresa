@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Interaktif</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/peta.css">
+</head>
+<body >
+
+    <!-- Sidebar --> 
+    
+    <div class="sidebar">
+  
+        <div class="sidebar-header">
+            <img src="../assets/image/saresa-logo.svg" alt="Logo" class="logo">
+        </div>
+        <div class="divider"></div> <!-- Divider -->
+        <ul class="menu">
+            <li><img src="../assets/icons/home.svg" alt="" class="icon"><span class="text">Beranda</span></li>
+            <li><img src="../assets/icons/world.svg" alt="" class="icon"><span class="text">Tentang Kami</span></li>
+            <li class="active"><img src="../assets/icons/cart.svg" class="icon"><span class="text">Hemat & Daur</span></li>
+            <li><img src="../assets/icons/phone.svg" alt="" class="icon"><span class="text">Kontak</span></li>
+            <li><img src="../assets/icons/user.svg" alt="" class="icon"><span class="text">Pengguna</span></li>
+        </ul>
+    </div>
+    
+  <button class="toggle-btn" onclick="toggleSidebar()">
+    <img src="../assets/icons/arrow-right.svg" alt=""></button>
+    <!-- Konten utama -->
+    <div class="main-content">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-bar">
+                <img src="../assets/icons/search.svg" class="search-icon">
+                <input type="text" placeholder="Temukan tempat di sekitarmu...">
+                <div class="search-button">
+                    <img src="../assets/icons/Group 138.svg" alt="" class="inner-circle">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <div class="map-wrapper" id="mapWrapper">
+            <div class="map-image"></div>
+    
+            <!-- Marker 1 -->
+            <div class="marker" >
+                <img src="../assets/image/marker1.svg" alt="Tempat 1" id="marker1">
+                <div class="pin"></div>
+            </div>
+    
+            <!-- Marker 2 -->
+            <div class="marker">
+                <img src="../assets/icons/marker2.svg" alt="Tempat 2" id="marker2">
+                <div class="pin"></div>
+            </div>
+    
+            <!-- Marker 3 -->
+            <div class="marker" >
+                <img src="../assets/icons/marker3.svg" alt="Tempat 3" id="marker3">
+                <div class="pin"></div>
+            </div>
+    
+            <!-- Marker 4 -->
+            <div class="marker" >
+                <img src="../assets/icons/marker4.svg" alt="Tempat 4" id="marker4">
+                <div class="pin"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Detail Marker -->
+<div class="marker-detail" id="markerDetail" style="display: none;">
+    <div class="divider-swipe"></div>
+    <div class="marker-detail-header">
+        <img src="../assets/image/detail1.svg" alt="Superindo Sampangan" class="marker-img">
+        <div class="marker-info">
+            <h1><img src="../assets/image/pin.svg" alt="" class="icon-meter">Terdekat 3.6 Km</h1>
+            <h3>Superindo Sampangan</h3>
+            <p class="marker-address"><img src="../assets/image/location.svg" alt="" class="icon-address">Jl. Simongan Raya A No. IV</p>
+            <p class="marker-distance">20 Menit dari lokasimu</p>
+            <p class="marker-description">
+            Produk mendekati kedaluwarsa atau bentuk kurang sempurna, tetapi layak konsumsi dan membantu mengurangi limbah makanan.
+         </p>
+        </div>
+
+        <!-- Love Icon di dalam header -->
+    <div class="love-icon">
+        <img src="../assets/icons/love.svg" alt="Love">
+    </div>
+    </div>
+
+    <div class="divider"></div> <!-- Divider -->
+   
+
+    <!-- List Produk -->
+    <div class="product-list">
+        <div class="product-item">
+            <img src="../assets/image/detail2.svg" alt="Sayuran Organik" class="product-img">
+            <div class="product-info">
+                <h1><img src="../assets/image/location.svg" alt="" class="icon-meter">Superindo Sampangan</h1>
+                <h4>Sayuran organik daur ulang</h4>
+                <p>Sayuran sisa yang tidak layak konsumsi, tapi bermanfaat untuk pakan ternak & kompos.</p>
+                <div class="product-price">
+                    <span class="discount">50%</span>
+                    <span class="old-price">146.000</span>
+                    <span class="new-price">68.000</span>
+                    <span class="vertical-divider"></span>
+                    <span class="stock">5 kg Tersedia</span>
+                </div>
+            </div>
+                           
+<div class="wrapper">
+    <div class="love-icon">
+        <img src="../assets/icons/love.svg" alt="Love">
+    </div>
+        <div class="chat-icon">
+            <img src="../assets/icons/chat.svg" alt="Chat">
+        </div>
+</div>
+        </div>
+
+        <div class="product-item">
+            <img src="../assets/image/detail3.svg" alt="Buah Organik" class="product-img">
+            <div class="product-info">
+                <h1><img src="../assets/image/location.svg" alt="" class="icon-meter">Superindo Sampangan</h1>
+                <h4>Buah-buahan organik daur ulang</h4>
+                <p>Buah-buahan sisa yang tidak layak konsumsi, tapi bermanfaat untuk pakan ternak & kompos.</p>
+                <div class="product-price">
+                    <span class="discount">50%</span>
+                    <span class="old-price">45.000</span>
+                    <span class="new-price">22.500</span>
+                    <span class="vertical-divider"></span>
+                    <span class="stock">1 kg Tersedia</span>
+            </div>
+            </div>
+                         
+<div class="wrapper">
+    <div class="love-icon">
+        <img src="../assets/icons/love.svg" alt="Love">
+    </div>
+        <div class="chat-icon">
+            <img src="../assets/icons/chat.svg" alt="Chat">
+        </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+     <!-- Tombol di pojok kanan bawah -->
+     <div class="map-buttons">
+        <div class="map-button">
+            <img src="../assets/icons/maximize.svg" alt="Zoom Out">
+        </div>
+        <div class="map-button">
+            <img src="../assets/icons/arrow.svg" alt="Lokasi">
+        </div>
+    </div>
+
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>

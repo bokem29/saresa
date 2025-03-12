@@ -1,0 +1,737 @@
+/* Reset Dasar */
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Kontainer utama */
+.map-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    cursor: grab;
+    
+}
+
+/* Wrapper yang bisa dige   ser */
+.map-wrapper {
+    position: absolute;
+    width: 100vw;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   px; /* Ganti sesuai ukuran gambar */
+    height: 100vh; /* Ganti sesuai ukuran gambar */
+
+    touch-action: none; /* Mencegah scroll bawaan browser di mobile */
+}
+
+/* Gambar peta */
+.map-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../image/bgmaps.png') no-repeat center ;
+    background-size: cover;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: var(--ivory-whisper);
+    padding: 20px;
+    display: flex;
+    margin: 15px 0px 15px 15px;
+    border-radius: 30px;
+    flex-direction: column;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease-in-out;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+    
+}
+
+/* Header sidebar */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Logo */
+.logo {
+    background-color: var(--ocean-teal);
+    width: 45px;
+    height: 45px;
+    padding: 5px 0px 9px ;
+    border-radius: 12px;
+    transition: width 0.3s ease
+}
+
+
+.divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1); /* Warna garis */
+    margin: 8px 0; /* Jarak atas & bawah */
+    width: 100%;
+}
+
+.vertical-divider {
+    display: inline-block;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+    margin: 0 1px;
+}
+
+
+/* Menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 0.9rem;
+    font-weight: var(--font-semibold);
+}
+
+.menu li.active {
+    background: var(--ocean-teal);
+    color: var(--ivory-whisper);
+    border-radius: 8px;
+}
+
+
+/* Ikon dan teks */
+.icon {
+    width: 18px;
+    margin-right: 14px;
+}
+
+.text {
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+  /* Marker Container */
+  .marker {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    animation: floating 3s ease-in-out infinite;
+    
+}
+
+
+.marker:nth-child(2) { left: 550px; bottom: 200px; }
+.marker:nth-child(3) { left: 500px; top: 100px; }
+.marker:nth-child(4) { right: 350px; top: 400px; }
+.marker:nth-child(5) { right: 0; bottom: 120px; }
+
+
+/* Gambar di atas marker */
+.marker img {
+    width: 90px;
+    height: 90px;
+    z-index: 1000;
+}
+
+
+
+
+/* Lingkaran kecil hijau tua */
+.pin {
+    width: 15px;
+    height: 15px;
+    background-color: var(--ocean-teal);
+    border-radius: 50%;
+    margin-top: -11px;
+    border: 2px solid white;
+    box-shadow: 0 2px 10px var(--ocean-teal);
+}
+
+
+/* Konten Utama */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: var(--ivory-whisper);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 7px 7px 7px 20px;
+    width: 32em;
+}
+
+/* Ikon pencarian */
+.search-icon {
+    width: 1.1rem;
+    color: #8a8a8a;
+    margin-right: 1.5em;
+}
+
+/* Input pencarian */
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+/* Tombol di sisi kanan */
+.search-button {
+    width: 42px;
+    height: 42px;
+    background-color: var(--ocean-teal);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Lingkaran dalam */
+.inner-circle {
+    width: 20px;
+}
+
+ /* Tombol di pojok kanan bawah */
+ .map-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.map-button {
+    width: 50px;
+    height: 50px;
+    background-color: var(--ocean-teal);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Tombol toggle sidebar */
+.toggle-btn {
+    position: absolute;
+    top: 5em;
+    left: 19em;
+    background-color: var(--ocean-teal);
+    border: none;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--ivory-whisper);
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease-in-out, transform 0.3s ease-in-out; /* Animasi smooth */
+    z-index: 1000;
+}
+
+.toggle-btn img{    
+    width: 12px;
+}
+
+
+/* Saat sidebar diminimalkan */
+.sidebar.minimized + .toggle-btn {
+    left: 5em;
+    transform: rotate(180deg); /* Pindahkan tombol lebih dekat ke sidebar yang diperkecil */
+}
+
+
+.sidebar.minimized .logo {
+    width: 40px;
+    height: 40px;
+}
+
+
+.sidebar.minimized {
+    width: 60px; /* Ukuran kecil untuk hanya menampilkan ikon */
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+ 
+.sidebar.minimized .text {
+    display: none; /* Hanya menyembunyikan teks, ikon tetap ada */
+}
+
+.sidebar.minimized .icon {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.marker-detail {
+    opacity: 0;
+    position: absolute;
+    top: 15%;
+    z-index: 1000;
+    width: 30em;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    animation: fadeIn 0.3s ease forwards;
+    transition: left 0.3s ease-in-out,  opacity 0.3s ease, transform 0.3s ease;
+}
+
+.love-icon {
+    background: #0050572f;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.love-icon img {
+    width: 14px;
+}
+
+.marker-detail-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.marker-img {
+    width: 135px;
+    height: 135px;
+    border-radius: 15px;
+}
+
+.marker-info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: var(--font-semibold);
+}
+
+.marker-info h1 {
+    margin: 1px 0px 17px 0px;
+    font-size: 12px;
+    color: #8a8a8a;
+    font-weight: var(--font-medium);
+}
+
+.marker-address {
+    font-size: 13px;
+    color: #8a8a8a;
+    margin: 6px 0;
+}
+
+.icon-address {
+    width: 10px;
+    margin-right: 6px;
+}
+
+.icon-meter {
+    width: 8px;
+    margin-right: 7px;
+}
+
+.marker-distance {
+    font-size: 10px;
+    color: #999999;
+    margin: 7px 0px;
+}
+
+.marker-description {
+    font-size: 10px;
+    color: var(--deep-navy);
+    margin-top: 1px;
+    max-width: 25em;
+}
+
+.product-list {
+    margin-top: 10px;
+}
+
+.product-item {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 6px solid var(--ocean-teal);
+}
+
+.product-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.product-info h4 {
+    font-size: 17px;
+    margin: 0;
+    font-weight: var(--font-semibold);
+    color: var(--deep-navy);
+}
+
+.product-info p {
+    font-size: 11px;
+    color: #5c5c5c;
+    margin: 7px 0;
+    max-width: 25em;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.product-info h1 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: var(--font-semibold);
+    color: var(--ocean-teal);
+}
+
+.product-info .icon-meter {
+   width: 10px;
+}
+
+
+.discount {
+    background: #ffa6a685;
+    color: #931c1c;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 10px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.new-price {
+    font-weight: var(--font-semibold);
+    color: #333;
+}
+
+.stock {
+    font-size: 11px;
+    color: var(--ocean-teal);
+    font-weight: var(--font-semibold);
+}
+
+.wrapper {
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+    gap: 40px;
+}
+
+.chat-icon {
+    background-color: var(--ocean-teal);
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.chat-icon img{
+    width: 12px;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px); /* Naik */
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+@keyframes pulseFade {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+
+.marker-detail.show {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.marker-detail.hide {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+.divider-swipe {
+    display: none;
+    height: 4px;
+    background: #8a8a8a;
+    width: 70px;
+    border-radius: 20px;
+    margin: 0 auto 15px;   
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        width: 20em;
+        padding: 3px 3px 3px 8px;
+        border-radius: 10px;
+        position: fixed;
+    }
+
+    .search-bar input {
+        font-size: 12px;
+    }
+
+    .search-icon {
+        margin-right: 10px;
+        width: 12px;
+    }
+
+    .search-button {
+        width: 30px;
+        height: 30px;
+        border-radius: 9px;
+    }
+
+    .inner-circle {
+        width: 15px;
+    }
+
+    .sidebar {
+        position: fixed;
+        margin: 0;
+        top: 5em;
+        display: none
+    }
+
+
+    .toggle-btn {
+        top: 10em;
+        width: 15px;
+        height: 15px;
+        display: none;
+
+    }
+
+    .toggle-btn img {
+        width: 10px;
+    }
+ 
+
+    .marker-detail {
+        position: fixed;
+        width: 100%;
+        z-index: 9999;  /* Menyesuaikan lebar dengan layar */
+        max-width: full;
+        left: 0%;
+        top: auto;
+        cursor: grab;
+        bottom: 0px; /* Supaya muncul di bagian bawah layar */
+        box-shadow: none;
+        border: 2px solid #d1d1d1a9;
+    }
+
+    
+
+    .marker-img {
+        width: 100px; /* Kurangi ukuran gambar */
+        height: 100px;
+    }
+
+    .marker-info h3 {
+        font-size: 14px
+    }
+
+    .marker-info h1 {
+        font-size: 10px;
+        margin-bottom: 7px;
+    }
+
+    .love-icon {
+        position: absolute;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .love-icon img {
+        width: 13px
+    }
+
+    .divider {
+        margin: 15px 0px
+    }
+
+    .divider-swipe {
+        display: block;
+    }
+
+    .icon-meter{
+        width: 5px
+    }
+
+    .marker-address {
+        font-size: 12px
+    }
+
+    .marker-distance {
+       font-size: 9px
+    }
+
+    .marker-description {
+        font-size: 9px;
+        max-width: none;
+        text-align: justify;
+    }
+
+    .marker-detail-header {
+        gap: 8px;
+        
+    }
+
+    .marker-img {
+        width: 120px;
+        height: 120px
+    }
+    
+    .product-info h1 {
+        font-size: 11px
+    }
+
+    .product-info .icon-meter {
+        width: 9px
+    }
+
+    .product-list {
+        cursor: pointer
+    }
+
+    .product-info h4 {
+        font-size: 14px;
+        max-width: 10em
+    }
+
+    .product-info p {
+        font-size: 9px;
+        max-width: none;
+        text-align: justify;
+        margin: 4px 0px
+    }
+
+    .product-price {
+        font-size: 10px;
+        gap: 4px
+    }
+
+    .discount {
+        font-size: 9px
+    }
+
+    .stock {
+        font-size: 8px
+    }
+
+    .chat-icon{
+        position: relative;
+        right: 0px;
+        top: 90px;
+        width: 20px;
+        height: 20px
+    }
+
+    .chat-icon img {
+        width: 10px
+    }
+
+    
+}
+
+

@@ -4,6 +4,9 @@ body {
     color: white;
     overflow-x: hidden;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 
 .background-container {
     position: relative;
@@ -68,8 +71,55 @@ body {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
-
 }
+.nav-links a:hover {
+    color: #E0FE08;
+    transition: 0.2s ease;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content a:hover{
+    color: #005057;
+    transition: 0.2 ease;
+}
+
+.dropbtn {
+    background: none;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 
 .daftar-btn {
@@ -80,11 +130,13 @@ body {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 20px;
     padding: 5px 5px;
+    text-decoration: none;
 }
 
 .daftar-btn span {
     margin-right: 10px;
     margin-left: 10px;
+    color: #fff;
 }
 
 .circle-icon {
@@ -93,6 +145,112 @@ body {
     background-color: var(--lemon-zest);
     border-radius: 50%;
 }
+.hamburger {
+    display: none; 
+    cursor: pointer;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px; 
+    width: 280px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Saat sidebar aktif */
+.sidebar.active {
+    left: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    background-color: #005057;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+}
+.navbar-profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.navbar-profile img{
+    height: 60px;
+    width: 60px;
+}
+.navbar-profile a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+.divider{
+    background-color: #00000033;
+    width: 100%;
+    height: 2px;
+}
+.sidebar ul {
+    list-style: none;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+.sidebar ul a {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    border-radius: 20px; 
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.sidebar ul a svg{
+    fill: #717171;
+}
+.sidebar ul a:hover {
+    background-color: #005057; 
+}
+
+.sidebar ul a:hover p,
+.sidebar ul a:hover svg {
+    fill: white !important;
+    stroke: white !important;
+    color: white;
+}
+
+.sidebar ul a p {
+    color: rgba(0, 0, 0, 0.471);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.circle-icon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--lemon-zest);
+    border-radius: 50%;
+}
+
 
 .content {
     display: flex;
@@ -108,8 +266,8 @@ body {
     margin-bottom: 30px;
 }
 
-.logo-center img {
-    height: 50px;
+.logo-center svg {
+    height: 80px;
 }
 
 .heading {
@@ -118,10 +276,29 @@ body {
     margin-bottom: 20px;
     line-height: 1.2;
 }
-
 .semesta {
-    color: var(--lemon-zest);
+    position: relative;
+    color: #E0FE08;
+    padding: 0 15px;
+    border-radius: 5px;
+    display: inline-block;
+    z-index: 1;
+    overflow: hidden; 
 }
+
+.semesta::before {
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 50%; 
+    background: #E0FE08;
+    opacity: 0.5;
+    z-index: -1; 
+    border-radius: 5px 5px 0 0; 
+}
+
 
 .subheading {
     font-size: 18px;
@@ -383,11 +560,27 @@ body {
     content: "?";
     color: #005057;
 }
-
 .highlight {
-    background-color: #c5ff00;
+    position: relative;
+    color: #005057;
     padding: 0 15px;
     border-radius: 5px;
+    display: inline-block;
+    z-index: 1;
+    overflow: hidden; 
+}
+
+.highlight::before {
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 75%; 
+    background: linear-gradient(to right, #E0FE08 70%, rgb(255, 255, 255) 100%);
+    opacity: 0.5;
+    z-index: -1; 
+    border-radius: 5px 5px 0 0; 
 }
 
 .benefits-container {
@@ -399,30 +592,37 @@ body {
 }
 
 .benefit-1 {
-    max-width: 33%;
+    max-width: 30%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 80%;
+    top: 50%;
+    left: 5%;
 }
+
 .benefit-2 {
-    max-width: 33%;
+    max-width: 30%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 35%;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    
 }
+
 .benefit-3 {
-    max-width: 33%;
+    max-width: 30%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 0%;
-    top: 80%;
+    top: 50%;
+    right: 5%;
 }
+
 
 .benefit-icon {
     font-size: 28px;
@@ -455,84 +655,91 @@ body {
     object-fit: contain;
     z-index: 1;
 }
-.body-slogan{
+.body-slogan {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
-    background-color: #f5f5f5;
-
-}
-.slogan-container {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+}
+
+.slogan-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .left, .right {
-    width: 50%;
+    width: 100%;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-size: 24px;
     position: relative;
-    padding: 20px;
 }
-
 .left {
     background: url('/assets/image/slogan-left.png') center/cover;
 }
 
 .right {
     background: url('/assets/image/slogan-right.png') center/cover;
-    position: relative;
 }
-.left::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 64, 64, 0.6);
-}
-
-.logo-slogan {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    fill: white;
-}
-
-.text-slogan {
-    position: absolute;
-    color: white;
-    top: 20px;
-    left: 20px;
-    font-size: 30px;
-    max-width: 27%;
-    text-align: left;
-}
-
-.text-slogan span {
-    color: #E0FE08;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.right p {
-    font-size: 30px;
-    margin-top: 10px;
+.right p{
     position: absolute;
     bottom: 20px;
     left: 20px;
 }
+
+.dots-container {
+    display: none; /* Hanya muncul di mobile */
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: yellow;
+}
+
+
 .container-mitra{
-    height: 600px;
+    height: auto;
     text-align: center;
     background-color: #fff;
     padding: 80px;
+}
+.slider-mitra{
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .container-mitra h1 {
     font-size: 40px;
@@ -609,6 +816,7 @@ body {
 
 .newsletter-footer {
     background-image: url('/assets/image/footerbg.png');
+    background-size: cover;
 }
 
 .footer-content {
@@ -731,20 +939,342 @@ body {
 }
 
 @media (max-width: 768px) {
-    .benefits-container {
+    .navbar{
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 14px 10px 8px 10px;
+        align-items: center;
+    }
+    .nav-links {
+        display: none;
         flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(232, 232, 232, 0.8);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 30px;
+        height: 3px;
+        background: #000;
+        transition: 0.3s;
+    }
+    .logo {
+        position: absolute;
+        left: 46%;
+        transform: translateX(-50%);
+        margin-bottom: 7px;
+    }
+    .logo svg{
+        height: 50px;
+        width: 50px;
+    }
+    .daftar-btn {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.049);
+        border: 2px solid #fff;
+        border-radius: 20px;
+        padding: 2px 2px;
     }
     
-    .benefit {
-        margin-bottom: 30px;
+    .daftar-btn span {
+        margin: 5px 10px;
+        font-size: 10px;
+    }
+    .circle-icon {
+        width: 20px;
+        height: 20px;
+        background-color: var(--lemon-zest);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .daftar-btn svg {
+        height: 20px;
+        width: 20px;
+    }    
+    .logo svg {
+        height: 40px;
+    }
+    .heading{
+        font-size: 40px;
+    }
+    .header-bar {
+        gap: 10px;
+    }
+    .feature {
+        font-size: 10px;
     }
     
+    .club {
+        gap: 7px;
+    }
+    .club svg{
+        width: 15px;
+        height: 15px;
+    }
+    .carousel-container {
+        display: flex;
+        overflow-x: auto; 
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+        padding: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 300px;
+        padding: 0 30px;
+    }
+
+    .carousel-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        width: 160px;
+        height: 200px;
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        transform: none;
+        rotate: none;
+        position: relative;
+        overflow: hidden; 
+    }
+    .card img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0; 
+    }
+    .card-1, .card-2, .card-3, .card-4, .card-5 {
+        transform: none;
+        rotate: none;
+        z-index: 1; 
+    }
+    .main-heading{
+        font-size: 20px;
+        text-align: left;
+        padding: 0 30px;
+    }
+    .sub-heading{
+        font-size: 15px;
+        text-align: left;
+        padding: 0 30px;
+    }
+    .logo-center {
+        justify-content: flex-start;
+        display: flex;
+        padding: 0 30px;
+    }
+    .benefit-1, .benefit-2, .benefit-3 {
+        max-width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        top: auto;
+        padding: 0;
+        margin-bottom: 5px;
+    }
+    .benefit-icon{
+        margin: 0;
+    }
+    .benefit-icon svg{
+        height: 40px;
+        width: 40px;
+    }
+
+    .benefits-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .broccoli-container{
+        height: 300px;
+    }     
     .title-large {
         font-size: 48px;
     }
-    
-    .broccoli-image {
-        width: 100%;
+    .broccoli-container img{
+        width: 500px;
+        height: 300px;
+    }
+    .carousel {
+        display: flex;
+        width: 200%; /* Karena ada 2 slide */
+        height: auto;
+        transform: translateX(0);
     }
 
+    .slide {
+        width: 100vw;
+        flex-shrink: 0;
+    }
+
+    .dots-container {
+        display: flex;
+    }
+    .slider-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+        max-width: 300px; /* Sesuaikan ukuran slider */
+        margin: auto;
+        position: relative;
+    }
+
+    .slider-mitra {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: calc(120px * 5); /* Lebar total semua gambar */
+        white-space: nowrap; /* Hindari gambar turun ke bawah */
+    }
+
+    .img-mitra {
+        width: 120px;
+        flex-shrink: 0; /* Jangan mengecilkan gambar */
+        display: inline-block; /* Pastikan tetap horizontal */
+    }
+
+    /* Tombol Arrow */
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 20px;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .arrow.left {
+        left: 0;
+    }
+
+    .arrow.right {
+        right: 0;
+    }
+    .newsletter-section{
+        align-items: flex-start;
+        padding: 20px 20px;
+        gap: 10px;
+    }
+    .newsletter-title{
+        font-size: 18px;
+    }
+    .newsletter-description{
+        font-size: 7px;
+    }
+    .join-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .join-button{
+        padding: 5px 10px;
+        font-size: 10px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .text-btn-join{
+        font-size: 15px;
+    }
+    .footer-content{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .footer-left{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo-social {
+        display: flex;
+        margin: 0 0 20px 0;
+        gap: 50px;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .footer-social{
+        margin-top: 15px;
+    }
+    .footer-contact{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
+@media (min-width: 769px) {
+    .slider-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 150px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .slider-mitra {
+        display: flex;
+        gap: 150px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .slide {
+        flex: none;
+    }
+
+    .img-mitra {
+        width: 120px;
+    }
+
+    /* ❌ Sembunyikan tombol panah di desktop */
+    .arrow {
+        display: none;
+    }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+    .carousel-container{
+        gap: 30px;
+    }
+  }
+@media screen and (min-width: 769px) {
+    .sidebar {
+        display: none;
+    }
 }

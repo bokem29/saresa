@@ -1,0 +1,320 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    max-width: 1200px;
+    background-color: #fff;
+}
+
+.form-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-bg {
+    position: relative;
+    overflow: hidden;
+    background-image: url('/assets/image/daftar.png');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-content {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    padding: 0 40px;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.image-content h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.image-content p {
+    color: white;
+    margin-bottom: 0;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Increased height for better visibility */
+    background-color: rgba(0, 85, 85, 0.8);
+    border-end-end-radius: 36px;
+    border-end-start-radius: 70px;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-section p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #888;
+    width: 100%;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #0303032a;
+}
+
+.divider::before {
+    margin-right: 10px;
+}
+
+.divider::after {
+    margin-left: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+label span {
+    color: #e74c3c;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.checkbox input {
+    width: auto;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.checkbox label {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #006666;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    background-color: #005555;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 10px;
+}
+
+.google-btn img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.login-link {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #006666;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form {
+    width: 100%;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        box-shadow: none;
+        height: auto;
+    }
+
+    body {
+        background-image: url('/assets/image/daftar-mobile.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        padding: 20px;
+    }
+
+    .container{
+        width: auto;
+        height: auto;
+        border-radius: 20px;
+    }
+    .form-section {
+        padding: 30px 20px;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        max-width: 400px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    h1 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .form-section p {
+        text-align: center;
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .login-link {
+        margin-top: 10px;
+    }
+    .google-btn {
+        padding: 5px;
+        border-radius: 20px;
+        margin-bottom: 5px;
+        gap: 10px;
+        font-size: 10px;
+    }
+    .google-btn svg{
+        height: 20px;
+        width: 20px;
+    }
+    .divider{
+        margin: 5px 0;
+        font-size: 10px;
+    }
+    .form-group{
+        margin: 5px 0;
+        font-size: 2;
+    }
+    label{
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+    #nama::placeholder{
+        font-size: 10px;
+    }
+    #email::placeholder{
+        font-size: 10px;
+    }
+    #password::placeholder{
+        font-size: 10px;
+    }
+    input{
+        padding: 10px 10px;
+    }
+    .checkbox label{
+        font-size: 10px;
+    }
+    .btn {
+        width: 50%;
+        padding: 10px;
+        background-color: #006666;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-size: 10px;
+        cursor: pointer;
+        margin-bottom: 0;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        transform: translateX(50%);
+    }
+    .login-link {
+        text-align: center;
+        width: 100%;
+        font-size: 10px;
+    }
+}

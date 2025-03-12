@@ -64,3 +64,73 @@ document.addEventListener('DOMContentLoaded', function() {
 //         });
 //     });
 // });
+const carousel = document.querySelector(".carousel-container");
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener("mouseleave", () => {
+    isDown = false;
+});
+
+carousel.addEventListener("mouseup", () => {
+    isDown = false;
+});
+
+carousel.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 2; // scroll speed
+    carousel.scrollLeft = scrollLeft - walk;
+});
+
+
+
+
+//nabvbar
+function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+}
+
+
+//mobile slogan body
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const slider = document.querySelector('.carousel');
+const dots = document.querySelectorAll('.dot');
+
+function moveSlide(index) {
+    currentIndex = index;
+    const newTransform = -index * 50 + '%';
+    slider.style.transform = `translateX(${newTransform})`;
+
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+}
+
+//mitra
+// let index = 0;
+// const slidesMitra = document.querySelector(".slider-mitra");
+// const totalSlides = slidesMitra.children.length;
+// const slideWidth = slidesMitra.children[0].offsetWidth; // Ambil ukuran gambar
+
+// function moveSlide(direction) {
+//     index += direction;
+
+//     if (index < 0) {
+//         index = totalSlides - 1; // Jika di awal, lompat ke gambar terakhir
+//     } else if (index >= totalSlides) {
+//         index = 0; // Jika di akhir, kembali ke gambar pertama
+//     }
+
+//     slidesMitra.style.transform = `translateX(${-index * slideWidth}px)`;
+// }

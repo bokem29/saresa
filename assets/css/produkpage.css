@@ -1,0 +1,310 @@
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.header {
+    background-color: #00565a;
+    color: white;
+    padding: 20px;
+    position: relative;
+    height: 300px;
+    border-end-end-radius: 60px;
+    border-bottom-left-radius: 60px;
+}
+
+.product-image-container {
+    text-align: center;
+    margin-top: -150px;
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 30px;
+}
+
+.product-title {
+    font-size: 25px;
+    color: #00565a;
+    font-weight: bold;
+}
+
+.discount-badge {
+    background-color: #ffeeee;
+    color: #e63946;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.price-container {
+    padding: 0 40px 10px;
+}
+
+.original-price {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.current-price {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+.toko-descrip{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.store-info {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.store-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.store-name {
+    font-weight: bold;
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.store-distance {
+    font-size: 12px;
+    color: #666;
+    margin-top: 3px;
+}
+.jarak p{
+    font-size: 15px;
+    color: #666;
+    font-weight: 600;
+}
+.location-icon {
+    margin-right: 8px;
+    color: #00565a;
+}
+
+.rating-container {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.star-icon {
+    color: #ffc107;
+    margin-right: 4px;
+}
+
+.rating {
+    font-weight: bold;
+    font-size: 14px;
+}
+.divider{
+    height: 18px;
+    margin: 0 10px;
+    width: 1px;
+    background-color: #6666669c;
+}
+
+.review-count {
+    color: #666;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.product-info {
+    padding: 15px 20px;
+}
+
+.info-header {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.info-grid {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.info-column {
+    flex: 1;
+}
+
+.info-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.info-value {
+    font-size: 14px;
+    color: #333;
+}
+
+.description {
+    margin-top: 20px;
+}
+
+.description-header {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.description-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.ingredients {
+    margin-top: 20px;
+}
+
+.ingredients-header {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.ingredients-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.reviews {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+}
+
+.reviews-header {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.review-card {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.reviewer-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.reviewer-stars {
+    color: #ffc107;
+    margin-left: auto;
+}
+
+.review-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.review-summary {
+    display: flex;
+    align-items: center;
+    background-color: #00565a;
+    color: white;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+
+.review-rating-large {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.rating-stars-large {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.review-count-large {
+    font-size: 14px;
+    color: #eee;
+}
+
+.order-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #00565a;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.header-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    margin-bottom: 20px;
+}
+.availability-tag {
+    background-color: #00565a;
+    color: #fff;
+    padding: 15px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.clock-icon {
+    margin-right: 5px;
+}
