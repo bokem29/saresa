@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    background-color: #0d4b50;
+    color: white;
+    padding: 10em 10em 4em ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image {
+    position: absolute;
+    right: 0;
+    padding: 20em 10em 0em 0em;
+    
+}
+
+.hero-image img{
+    width: 360px;
+    
+}
+
+
+.hero-content h1 {
+    font-size: 4.2em;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    color: var(--lemon-zest);
+}
+
+.description {
+    font-size: 1.1rem;
+    max-width: 30rem;
+}
+
+.contact-info {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.title-contact {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    padding-left: 20%;
+    color: var(--deep-navy);
+}
+
+.info-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 3em 0em 0em 7em;
+}
+
+.info-icon {
+    background-color: #162d40;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin: 0 auto 10px auto;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+}
+
+.info-icon img {
+    width: 20px;  /* Atur ukuran ikon */
+    height: auto;
+    
+}
+
+.sub-info {
+    color: var(--ocean-teal);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.desc-info {
+    color: var(--deep-navy);
+    font-weight: var(--font-semibold);
+    font-size: 1.1rem;
+    margin-top: 0.4rem;
+}
+
+.contact {
+    padding: 4em 6em ;
+}
+
+.contact-container {
+    background-image: url('../image/bgcontact.png');
+    background-size: cover;
+    color: var(--ivory-whisper);
+    background-repeat: no-repeat;
+    padding: 45px 0px 35px 50px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    position: relative;
+    
+}
+
+.contact-container p {
+    max-width: 30em;
+    margin: 2em 0em;
+    font-size: 1.1rem;
+}
+
+.contact-content {
+    flex: 1;
+}
+
+.contact-content h2 {
+    font-size: 2.3rem;
+    font-weight: var(--font-semibold);
+}
+
+.highlight {
+    color: var(--lemon-zest);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 14px;
+    max-width: 50%;
+}
+
+.contact-form input,
+.contact-form textarea:focus {
+    outline: none;
+}
+
+.textarea-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.textarea-container textarea {
+    width: 100%;
+    height: 11em;
+    padding: 15px 20px;
+    border-radius: 22px;
+    border: none;
+    font-size: 1rem;
+    resize: none;
+    flex-grow: 1;
+
+}
+
+.textarea-container button {
+    position: absolute;
+    background-color: var(--ocean-teal);
+    color: white;
+    border: none;
+    padding: 9px 30px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    left: 40%;
+}
+
+.contact-image img {
+    width: 270px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
+@media (max-width: 768px){
+
+    .hero {
+         padding: 7em 0em 2em 1em ;
+    }
+
+    .hero-image {
+        padding: 5em 1em 0em 0em;
+        
+     }
+
+    .hero-image img{
+       width: 145px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        font-size: 0.45rem;
+        max-width: 26em;
+    }
+
+    .title-contact {
+        font-size: 1rem;
+    }
+
+    .contact-info {
+        margin: 1.5em 0em;
+    }
+
+    .title-contact {
+        padding-left: 10%;
+    }
+
+    .info-container {
+        gap: 5px;
+        padding: 2em 0em 0em 1em;
+    }
+
+    .info-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .info-icon img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .sub-info {
+        font-size: 0.6rem;
+    }
+
+    .desc-info {
+        font-size: 0.6rem;
+    }
+    
+}
