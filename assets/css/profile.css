@@ -623,7 +623,7 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 14px 10px 8px 10px;
+        padding: 14px 10px 20px 10px;
         align-items: center;
     }
     .nav-links {
@@ -680,7 +680,7 @@ body {
     
     .daftar-btn span {
         margin: 5px 10px;
-        font-size: 10px;
+        font-size: 15px;
     }
     .circle-icon {
         width: 20px;
@@ -768,9 +768,11 @@ body {
     .form-input{
         border-radius: 20px;
         font-size: 10px;
+        padding: 23px 20px;
+        font-size: 15px;
     }
     .form-label{
-        font-size: 13px;
+        font-size: 15px;
     }
     .save-button{
         font-size: 13px;
@@ -789,7 +791,7 @@ body {
         font-size: 18px;
     }
     .newsletter-description{
-        font-size: 7px;
+        font-size: 15px;
     }
     .join-container{
         display: flex;

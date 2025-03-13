@@ -629,11 +629,11 @@ body {
     }
 
     .marker-info h3 {
-        font-size: 14px
+        font-size: 18px
     }
 
     .marker-info h1 {
-        font-size: 10px;
+        font-size: 13px;
         margin-bottom: 7px;
     }
 
@@ -669,7 +669,7 @@ body {
     }
 
     .marker-description {
-        font-size: 9px;
+        font-size: 13px;
         max-width: none;
         text-align: justify;
     }
@@ -697,40 +697,40 @@ body {
     }
 
     .product-info h4 {
-        font-size: 14px;
-        max-width: 10em
+        font-size: 18px;
+        max-width: 80%;
     }
 
     .product-info p {
-        font-size: 9px;
+        font-size: 13px;
         max-width: none;
         text-align: justify;
         margin: 4px 0px
     }
 
     .product-price {
-        font-size: 10px;
+        font-size: 13px;
         gap: 4px
     }
 
     .discount {
-        font-size: 9px
+        font-size: 12px
     }
 
     .stock {
-        font-size: 8px
+        font-size: 12px
     }
 
     .chat-icon{
         position: relative;
         right: 0px;
         top: 90px;
-        width: 20px;
-        height: 20px
+        width: 40px;
+        height: 40px
     }
 
     .chat-icon img {
-        width: 10px
+        width: 25px
     }
 
     
