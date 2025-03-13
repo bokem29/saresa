@@ -137,7 +137,6 @@ function toggleMenu() {
 }
 
 
-//mobile slogan body
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const slider = document.querySelector('.carousel');

@@ -544,6 +544,7 @@ html, body {
 }
 .item-menu{
     transition: all 0.5s ease;
+    cursor: pointer;
     transform: scale(0.9);
     flex-shrink: 0.1;
     display: flex;

@@ -32,3 +32,12 @@ function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     sidebar.classList.toggle("active");
 }
+
+document.querySelectorAll('.item-menu').forEach(item => {
+    item.addEventListener('click', function() {
+        let targetUrl = this.getAttribute('data-url');
+        if (targetUrl) {
+            window.location.href = targetUrl;
+        }
+    });
+});

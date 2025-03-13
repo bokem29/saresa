@@ -3,6 +3,7 @@ body {
     background-color: '#FEFFFD';
     color: white;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -94,6 +95,10 @@ body::-webkit-scrollbar{
     color: white;
     font-size: 16px;
     cursor: pointer;
+}
+.dropbtn:hover {
+    color: #c5ff00;
+    transition: 0.3s ease;
 }
 
 .dropdown-content {
@@ -281,7 +286,6 @@ body::-webkit-scrollbar{
     color: #E0FE08;
     padding: 0 15px;
     border-radius: 5px;
-    display: inline-block;
     z-index: 1;
     overflow: hidden; 
 }
@@ -296,7 +300,6 @@ body::-webkit-scrollbar{
     background: #E0FE08;
     opacity: 0.5;
     z-index: -1; 
-    border-radius: 5px 5px 0 0; 
 }
 
 
@@ -344,6 +347,7 @@ body::-webkit-scrollbar{
     color: #333;
     overflow-x: hidden;
     padding: 0px 0px 40px 0px;
+    overflow-y: hidden;
 }
 
 .header-bar {
@@ -411,6 +415,8 @@ body::-webkit-scrollbar{
     overflow: hidden;
     transform-origin: center bottom;
 }
+
+
 
 .card img {
     position: absolute;
@@ -556,10 +562,6 @@ body::-webkit-scrollbar{
     display: inline-block;
 }
 
-.title-large::after {
-    content: "?";
-    color: #005057;
-}
 .highlight {
     position: relative;
     color: #005057;
@@ -674,7 +676,7 @@ body::-webkit-scrollbar{
 .carousel {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 50%;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -726,7 +728,6 @@ body::-webkit-scrollbar{
 .dot.active {
     background: yellow;
 }
-
 
 .mitra-section {
     background: white;
@@ -1147,6 +1148,10 @@ body::-webkit-scrollbar{
     .slide {
         width: 100vw;
         flex-shrink: 0;
+    }
+
+    .dots-container {
+        display: flex;
     }
 
     .dots-container {
