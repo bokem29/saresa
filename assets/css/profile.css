@@ -672,7 +672,7 @@ body {
         display: flex;
         align-items: center;
         cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.049);
+        background-color: rgba(0, 0, 0, 0.5);
         border: 2px solid #fff;
         border-radius: 20px;
         padding: 2px 2px;
@@ -858,5 +858,55 @@ body {
         width: 300px;
         top: 40px;
         right: 40px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content {
+        padding: 40px;
+        margin-top: 100px;
+    }
+    .container {
+        align-items: flex-start;
+    }
+    .profile-header {
+        width: 250px;
+        height: 800px;
+        flex-shrink: 0;
+        align-items: center;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .search-container {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .form-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #005e63;
+        margin-bottom: 8px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    .footer-content{
+        padding: 40px;
+        gap: 20px;
+    }
+    .footer-navigation{
+        margin-top: 10px;
+    }
+    .footer-contact{
+        margin-top: 10px;
+    }
+    .logo-social{
+        margin-right: 10px;
+    }
+    .footer-mission{
+        margin-top: 10px;
+    }
+    .footer-left{
+        align-items: flex-start;
     }
 }

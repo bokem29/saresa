@@ -1,4 +1,37 @@
 // Simple script to handle button hover effects
+document.addEventListener("DOMContentLoaded", function () {
+    const overlay = document.querySelector(".overlay");
+    const links = document.querySelectorAll(".transition-link");
+
+    // Pastikan overlay tidak langsung muncul lagi jika halaman baru dimuat
+    overlay.style.left = "-100%";
+
+    // Cek apakah sebelumnya ada transisi yang terjadi
+    if (sessionStorage.getItem("transitioning") === "true") {
+        sessionStorage.removeItem("transitioning"); // Hapus status transisi sebelum animasi berjalan
+
+        setTimeout(() => {
+            overlay.style.left = "-100%";
+        }, 2500);
+    }
+
+    // Saat link diklik, jalankan transisi
+    links.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah pindah halaman langsung
+
+            const targetUrl = this.getAttribute("href");
+            sessionStorage.setItem("transitioning", "true"); // Tandai transisi sedang berlangsung
+
+            overlay.style.left = "0"; // Overlay muncul
+
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 500);
+        });
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const ctaButton = document.querySelector('.cta-button');
     const daftarBtn = document.querySelector('.daftar-btn');
@@ -20,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.transform = 'scale(1)';
     });
 });
+
+
 // document.addEventListener('DOMContentLoaded', function() {
 //     const cards = document.querySelectorAll('.card');
 //     let currentIndex = 0;
@@ -117,6 +152,7 @@ function moveSlide(index) {
     dots[currentIndex].classList.add('active');
 }
 
+
 //mitra
 // let index = 0;
 // const slidesMitra = document.querySelector(".slider-mitra");
@@ -134,3 +170,6 @@ function moveSlide(index) {
 
 //     slidesMitra.style.transform = `translateX(${-index * slideWidth}px)`;
 // }
+
+
+

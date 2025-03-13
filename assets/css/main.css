@@ -49,5 +49,26 @@
 }
 
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Awalnya di luar layar */
+    width: 100%;
+    height: 100vh;
+    background: url('../image/transisi.svg') no-repeat center;
+    background-size: cover; /* Tinggi 100%, lebar menyesuaikan */
+    z-index: 9999;
+    transition: left 0.5s ease-in-out; /* Animasi transisi */
 
+}
 
+/* Ketika overlay aktif */
+.overlay.active {
+    left: 0;
+}
+@media (max-width: 768px) {
+    .overlay {
+        background-size: cover; /* Pastikan tetap cover di mobile */
+        height: 100vh; /* Pastikan tetap 100vh */
+    }
+}

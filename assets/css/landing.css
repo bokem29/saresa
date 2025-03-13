@@ -728,44 +728,54 @@ body::-webkit-scrollbar{
 }
 
 
-.container-mitra{
-    height: auto;
-    text-align: center;
-    background-color: #fff;
+.mitra-section {
+    background: white;
     padding: 80px;
+    text-align: center;
 }
-.slider-mitra{
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.mitra-slider {
     display: flex;
-    gap: 150px;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 20px;
 }
-.container-mitra h1 {
+
+.mitra-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.mitra-row:first-child {
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.mitra-row:last-child {
+    justify-content: center;
+   
+}
+
+.mitra-logo {
+    width: 140px;
+    height: 140px;
+    
+}
+
+.mitra-title {
     font-size: 40px;
     font-weight: bold;
-    color: #005057;
+    color: var(--ocean-teal);
     margin-bottom: 70px;
-}
-.mitra-first {
-    display: flex;
-    gap: 150px;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 600px;
-    margin-bottom: 50px;
-}
-.mitra-seccond {
-    display: flex;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 150px;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 600px;
-}
-.img-mitra {
-    width: 120px;
 }
 
 .newsletter-section {
@@ -1153,39 +1163,58 @@ body::-webkit-scrollbar{
         position: relative;
     }
 
-    .slider-mitra {
+    .mitra-slider {
         display: flex;
-        transition: transform 0.5s ease-in-out;
-        width: calc(120px * 5); /* Lebar total semua gambar */
-        white-space: nowrap; /* Hindari gambar turun ke bawah */
+        width: 100%; /* Sesuai jumlah logo */
+        flex-direction: row;
+        animation: autoSlide 6s infinite ease-in-out;
     }
 
-    .img-mitra {
-        width: 120px;
-        flex-shrink: 0; /* Jangan mengecilkan gambar */
-        display: inline-block; /* Pastikan tetap horizontal */
+    .mitra-row {
+        display: flex;
+        justify-content: center;
+        flex: 0 0 200%;
     }
 
-    /* Tombol Arrow */
-    .arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        font-size: 20px;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 2;
+    .prev, .next {
+        display: none;
+        z-index: 1000; /* Tampilkan tombol di mobile */
     }
 
-    .arrow.left {
-        left: 0;
+    .slider-container {
+        position: relative;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        scrollbar-width: none; /* Sembunyikan scrollbar */
+        -ms-overflow-style: none;
     }
 
-    .arrow.right {
-        right: 0;
+    .mitra-logo {
+        text-align: center;
+        object-fit: contain;
+    }
+
+    .mitra-section {
+        padding: 50px;
+        scroll-snap-align: center;
+    }
+    
+    .mitra-title {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .mitra-row:first-child {
+        margin-bottom: 0px;
+        width: 0px;
+    }
+
+    .mitra-row:last-child {
+        width: 0px;
     }
     .newsletter-section{
         align-items: flex-start;
@@ -1276,5 +1305,26 @@ body::-webkit-scrollbar{
 @media screen and (min-width: 769px) {
     .sidebar {
         display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-content{
+        padding: 40px;
+        gap: 20px;
+    }
+    .footer-navigation{
+        margin-top: 10px;
+    }
+    .footer-contact{
+        margin-top: 10px;
+    }
+    .logo-social{
+        margin-right: 10px;
+    }
+    .footer-mission{
+        margin-top: 10px;
+    }
+    .footer-left{
+        align-items: flex-start;
     }
 }

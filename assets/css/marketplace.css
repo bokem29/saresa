@@ -878,8 +878,8 @@ html, body {
         display: flex;
         align-items: center;
         cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.049);
-        border: 2px solid #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 1px solid rgb(255, 255, 255);
         border-radius: 20px;
         padding: 2px 2px;
     }
@@ -905,15 +905,16 @@ html, body {
         height: 40px;
     }
     .heading {
-        font-size: 2rem;
-        font-weight: 400;
+        margin-top: 50px;
+        font-size: 2.7rem;
+        font-weight: bold;
         margin-bottom: 20px;
         line-height: 1.2;
         color: #005057;
     }
     .subheading{
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 20px;
+        line-height: 1.2;
     }
     .content {
         display: flex;
@@ -1249,7 +1250,7 @@ html, body {
     }
     .background-image{
         width: 60%;
-        height: 80%;
+        height: 60%;
         background-size: cover;
     }
     .green-blur{

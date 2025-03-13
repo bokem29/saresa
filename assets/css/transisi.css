@@ -1,0 +1,49 @@
+/* Background gradient */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #005f5f, #007a7a);
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Efek masuk */
+body.fade-in {
+    opacity: 1;
+}
+
+/* Efek keluar sebelum pindah halaman */
+body.fade-out {
+    opacity: 0;
+}
+
+/* Overlay transisi */
+.transition-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animasi masuk */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
