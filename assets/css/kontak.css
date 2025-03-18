@@ -514,8 +514,8 @@ body {
 
     .hero-image img{
        width: 140px;
-       margin-top: 100px;
-       height: 250px;
+       margin-top: 0px;
+       height: 200px;
     }
 
     .hero-content h1 {
@@ -524,8 +524,8 @@ body {
     }
 
     .description {
-        font-size: 10px;
-        max-width: 26em;
+        font-size: 15px;
+        max-width: 60%;
     }
 
     .title-contact {
@@ -543,6 +543,7 @@ body {
     .info-container {
         gap: 10px;
         padding: 2em 0em 0em 1em;
+        max-width: 70%;
     }
 
     .info-icon {
@@ -560,7 +561,7 @@ body {
     }
 
     .desc-info {
-        font-size: 9px;
+        font-size: 10px;
     }
     .contact-content h2{
         font-size: 25px;
@@ -613,16 +614,17 @@ body {
     }
     .hero-image {
         position: absolute;
-        right: 0;
-        padding: 20em 0em 0em 0em;
+        right: 40px;
+        padding: 10em 0em 0em 0em;
     }
     .hero-image img{
-        width: 360px;
+        width: 250px;
+        height: 300px;
     }
     .info-container {
         display: flex;
         justify-content: flex-start;
-        gap: 10px;
+        gap: 4  0px;
         padding: 3em 0em 0em 4em;
     }
     .desc-info{
@@ -631,5 +633,7 @@ body {
     .textarea-container button {
         left: 30%;
     }
-    
+    .description{
+        max-width: 50%;
+    }
 }

@@ -1008,7 +1008,7 @@ body::-webkit-scrollbar{
         background-color: rgba(0, 0, 0, 0.049);
         border: 2px solid #fff;
         border-radius: 20px;
-        padding: 2px 2px;
+        padding: 5px 2px;
     }
     
     .daftar-btn span {
@@ -1016,8 +1016,8 @@ body::-webkit-scrollbar{
         font-size: 15px;
     }
     .circle-icon {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         background-color: var(--lemon-zest);
         border-radius: 50%;
         display: flex;
