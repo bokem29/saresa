@@ -565,18 +565,19 @@ body {
 @media (max-width: 768px) {
     .search-bar {
         width: 20em;
-        padding: 3px 3px 3px 8px;
+        height: 3em;
+        padding: 3px 8px 3px 8px;
         border-radius: 10px;
         position: fixed;
     }
 
     .search-bar input {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .search-icon {
         margin-right: 10px;
-        width: 12px;
+        width: 20px;
     }
 
     .search-button {

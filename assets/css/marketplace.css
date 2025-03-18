@@ -882,7 +882,7 @@ html, body {
         background-color: rgba(0, 0, 0, 0.5);
         border: 1px solid rgb(255, 255, 255);
         border-radius: 20px;
-        padding: 2px 2px;
+        padding: 5px 3.5px;
     }
     
     .daftar-btn span {
@@ -890,8 +890,8 @@ html, body {
         font-size: 15px;
     }
     .circle-icon {
-        width: 20px;
-        height: 20px;
+        width: 27px;
+        height: 27px;
         background-color: var(--lemon-zest);
         border-radius: 50%;
         display: flex;
@@ -1192,6 +1192,11 @@ html, body {
         padding: 20px 20px;
         gap: 10px;
     }
+    .newsletter-header {
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     .newsletter-title{
         font-size: 18px;
     }
@@ -1203,10 +1208,11 @@ html, body {
         flex-direction: column;
     }
     .join-button{
+        height: 40px;
         padding: 5px 10px;
-        font-size: 10px;
+        font-size: 14px;
         width: 100%;
-        margin-bottom: 5px;
+        margin-bottom: 20px;
     }
     .text-btn-join{
         font-size: 15px;

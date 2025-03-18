@@ -478,7 +478,7 @@ body {
         background-color: rgba(0, 0, 0, 0.5);
         border: 1px solid rgb(255, 255, 255);
         border-radius: 20px;
-        padding: 2px 2px;
+        padding: 5px 3.5px;
     }
     
     .daftar-btn span {
@@ -486,8 +486,8 @@ body {
         font-size: 15px;
     }
     .circle-icon {
-        width: 20px;
-        height: 20px;
+        width: 27px;
+        height: 27px;
         background-color: var(--lemon-zest);
         border-radius: 50%;
         display: flex;

@@ -242,13 +242,12 @@ body {
 
 .warning{
     padding: 20px;
-    margin: 20px 0;
-    width: 60%;
-    transform: translateX(40%);
+    margin: 20px;
     display: flex;
     background-color: #931c1c49;
     border: 1px solid #931C1C;
     border-radius: 15px;
+    justify-content: center;
 }
 .reviews {
     padding: 15px 20px;
@@ -270,7 +269,10 @@ body {
 }
 
 .review-card {
-    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 15px;
     border-radius: 30px;
     background-color: #ffffff;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
@@ -284,10 +286,22 @@ body {
     align-items: center;
     margin-bottom: 8px;
 }
+.review-name-container{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    gap: 8px;
+}
+.nama-bintang{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .reviewer-avatar {
-    width: 36px;
-    height: 36px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     margin-right: 10px;
     object-fit: cover;
@@ -307,7 +321,8 @@ body {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 10px;
-    color: #333;
+    color: #0000006d;
+    width: 80%;
 }
 
 .review-summary {
@@ -316,13 +331,13 @@ body {
     background-color: #00565a;
     color: white;
     border-radius: 20px;
-    padding: 15px 30px;
+    padding: 40px 100px;
     gap: 20px;
     flex-direction: column;
 }
 
 .review-rating-large {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     margin-right: 15px;
 }
@@ -333,7 +348,7 @@ body {
 }
 
 .review-count-large {
-    font-size: 14px;
+    font-size: 18px;
     color: #eee;
 }
 
@@ -366,7 +381,7 @@ body {
     color: #fff;
     padding: 15px 12px;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .clock-icon {
@@ -400,7 +415,7 @@ body {
     .availability-tag {
         padding: 10px 8px;
         border-radius: 15px;
-        font-size: 8px;
+        font-size: 10px;
     }
     .clock-icon svg{
         height: 15px;
@@ -438,9 +453,12 @@ body {
         margin: 0;
     }
     .description-text {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.2;
         color: #333;
+    }
+    .ingredients-text {
+        line-height: 1.2;
     }
     .warning p{
         font-size: 12px;
@@ -459,14 +477,16 @@ body {
     }
     .review-card{
         border-radius: 15px;
+        padding: 15px;
     }
     .review-text{
         font-size: 12px;
+        width: 100%;
     }
     .order-button {
         display: block;
-        width: 40%;
-        padding: 15px;
+        width: 50%;
+        padding: 20px 15px;
         background-color: #00565a;
         color: white;
         text-align: center;
@@ -475,7 +495,7 @@ body {
         border-radius: 30px;
         margin-top: 20px;
         cursor: pointer;
-        font-size: 9px;
+        font-size: 12px;
     }
     
     

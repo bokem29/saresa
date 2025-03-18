@@ -1008,7 +1008,7 @@ body::-webkit-scrollbar{
         background-color: rgba(0, 0, 0, 0.049);
         border: 2px solid #fff;
         border-radius: 20px;
-        padding: 5px 2px;
+        padding: 5px 3.5px;
     }
     
     .daftar-btn span {
@@ -1016,8 +1016,8 @@ body::-webkit-scrollbar{
         font-size: 15px;
     }
     .circle-icon {
-        width: 25px;
-        height: 25px;
+        width: 27px;
+        height: 27px;
         background-color: var(--lemon-zest);
         border-radius: 50%;
         display: flex;
@@ -1227,6 +1227,11 @@ body::-webkit-scrollbar{
         padding: 20px 20px;
         gap: 10px;
     }
+    .newsletter-header {
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     .newsletter-title{
         font-size: 18px;
     }
@@ -1238,10 +1243,11 @@ body::-webkit-scrollbar{
         flex-direction: column;
     }
     .join-button{
+        height: 40px;
         padding: 5px 10px;
-        font-size: 10px;
+        font-size: 14px;
         width: 100%;
-        margin-bottom: 5px;
+        margin-bottom: 20px;
     }
     .text-btn-join{
         font-size: 15px;
