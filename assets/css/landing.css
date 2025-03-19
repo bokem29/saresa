@@ -49,19 +49,18 @@ body::-webkit-scrollbar{
     width: 90%;
     max-width: 1800px;
     background-color: rgba(97, 97, 97, 0.226);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(9px);
+    transition: all 0.2s ease-in-out;
 }
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+  }
 
-
-.logo {
-    display: flex;
-    align-items: center;
+.navbar:hover {
+    background-color: rgba(97, 97, 97, 0.226);
+    backdrop-filter: blur(14px);
 }
-
-.logo img {
-    height: 40px;
-}
-
 .nav-links {
     display: flex;
     gap: 30px;
@@ -69,13 +68,23 @@ body::-webkit-scrollbar{
 
 .nav-links a {
     color: white;
+    transition: color 0.3s ease;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
+    transition: all 0.4s ease;
 }
+.navbar.scrolled .nav-links a {
+    color: var(--ocean-teal); 
+  }
+
+.navbar.scrolled .logo svg {
+    filt 
+}
+
 .nav-links a:hover {
-    color: #E0FE08;
-    transition: 0.2s ease;
+    color: var(--ocean-teal);
+        transition: all 0.2s ease;
 }
 .dropdown {
     position: relative;
@@ -83,7 +92,8 @@ body::-webkit-scrollbar{
 }
 .dropdown-content a:hover{
     color: #005057;
-    transition: 0.2 ease;
+    font-weight: var(--font-semibold);
+    transition: all 0.2s ease;
 }
 
 .dropbtn {
@@ -93,11 +103,16 @@ body::-webkit-scrollbar{
     gap: 5px;
     border: none;
     color: white;
+    transition: color 0.3s ease;
     font-size: 16px;
     cursor: pointer;
 }
+.navbar.scrolled .dropbtn {
+    color: black;
+  }
+  
 .dropbtn:hover {
-    color: #c5ff00;
+    color: var(--lemon-zest);
     transition: 0.3s ease;
 }
 
@@ -298,7 +313,7 @@ body::-webkit-scrollbar{
     width: 100%;
     height: 50%; 
     background: #E0FE08;
-    opacity: 0.5;
+    opacity: 0.3;
     z-index: -1; 
 }
 
@@ -395,7 +410,7 @@ body::-webkit-scrollbar{
     height: 300px;
     justify-content: center;
     align-items: flex-end;
-    gap: 120px;
+    gap: 100px;
 }
 
 .card {
@@ -407,12 +422,11 @@ body::-webkit-scrollbar{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
-    color: #333;
-    font-weight: bold;
+    padding-left: 15px;
+    font-size: 19px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
-    overflow: hidden;
+    overflow: visible;
     transform-origin: center bottom;
 }
 
@@ -431,9 +445,27 @@ body::-webkit-scrollbar{
 
 .card-content {
     z-index: 1;
-    max-width: 80%;
+    max-width: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.card-info {
+    color: var(--deep-navy);
+    font-weight: var(--font-extrabold);
+}
+
+.card-info span {
+    font-weight: var(--font-medium);
+}
+
+.card-info-4 {
+    color: var(--ocean-teal);
+    font-weight: var(--font-extrabold);
+}
+
+.card-info-4 span {
+    font-weight: var(--font-medium);
 }
 
 .card-icon {
@@ -451,14 +483,16 @@ body::-webkit-scrollbar{
 }
 .card-pin-4 {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -5px;
+    right: -10px;
 }
 .card-pin-2 {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -5px;
+    left: -10px;
 }
+
+
 
 .card-1 {
     background-color: #e3ff00;
@@ -488,7 +522,7 @@ body::-webkit-scrollbar{
 
 .logo-center {
     text-align: center;
-    margin: 30px 0;
+    margin-top: 30px;
 }
 
 .logo-center img {
@@ -510,9 +544,10 @@ body::-webkit-scrollbar{
 }
 
 .sub-heading {
-    color: #666;
+    color: #888888;
     font-size: 16px;
     line-height: 1.5;
+    font-weight: var(--font-semibold);
     margin-bottom: 30px;
 }
 
@@ -524,11 +559,12 @@ body::-webkit-scrollbar{
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .cta-join:hover {
-    background-color: #007a7a;
+    box-shadow: 0 10px 20px #00747f56;
+    transform: translateY(-4px);
 }
 
 .section-about {
@@ -710,7 +746,7 @@ body::-webkit-scrollbar{
 }
 
 .dots-container {
-    display: none; /* Hanya muncul di mobile */
+    display: none;
     justify-content: center;
     position: absolute;
     bottom: 10px;
@@ -1074,7 +1110,7 @@ body::-webkit-scrollbar{
         transform: none;
         rotate: none;
         position: relative;
-        overflow: hidden; 
+        overflow: visible; 
     }
     .card img {
         position: absolute;
@@ -1141,7 +1177,7 @@ body::-webkit-scrollbar{
     }
     .carousel {
         display: flex;
-        width: 200%; /* Karena ada 2 slide */
+        width: 200%; 
         height: auto;
         transform: translateX(0);
     }
@@ -1164,14 +1200,14 @@ body::-webkit-scrollbar{
         justify-content: center;
         overflow: hidden;
         width: 100%;
-        max-width: 300px; /* Sesuaikan ukuran slider */
+        max-width: 300px;
         margin: auto;
         position: relative;
     }
 
     .mitra-slider {
         display: flex;
-        width: 100%; /* Sesuai jumlah logo */
+        width: 100%;
         flex-direction: row;
         animation: autoSlide 6s infinite ease-in-out;
     }
@@ -1184,7 +1220,7 @@ body::-webkit-scrollbar{
 
     .prev, .next {
         display: none;
-        z-index: 1000; /* Tampilkan tombol di mobile */
+        z-index: 1000;
     }
 
     .slider-container {
@@ -1195,7 +1231,7 @@ body::-webkit-scrollbar{
         justify-content: center;
         align-items: center;
         white-space: nowrap;
-        scrollbar-width: none; /* Sembunyikan scrollbar */
+        scrollbar-width: none;
         -ms-overflow-style: none;
     }
 
@@ -1303,8 +1339,6 @@ body::-webkit-scrollbar{
     .img-mitra {
         width: 120px;
     }
-
-    /* ❌ Sembunyikan tombol panah di desktop */
     .arrow {
         display: none;
     }

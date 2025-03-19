@@ -10,10 +10,11 @@
     <script src="/assets/js/index.js" defer></script>
 </head>
 <body >
-    <div class="overlay"></div> <!-- Overlay untuk transisi -->
+     <!-- Overlay untuk transisi -->
+    <div class="overlay"></div>
+
     <!-- Sidebar --> 
     <div class="sidebar">
-  
         <div class="sidebar-header">
             <img src="../assets/image/saresa-logo.svg" alt="Logo" class="logo">
         </div>
@@ -27,8 +28,9 @@
         </ul>
     </div>
     
-  <button class="toggle-btn" onclick="toggleSidebar()">
-    <img src="../assets/image/arrow-right copy.svg" alt=""></button>
+    <button class="toggle-btn" onclick="toggleSidebar()">
+        <img src="../assets/image/arrow-right copy.svg" alt="">
+    </button>
     <!-- Konten utama -->
     <div class="main-content">
         <!-- Search Bar -->
@@ -70,83 +72,82 @@
     </div>
     
     <!-- Detail Marker -->
-<div class="marker-detail" id="markerDetail" style="display: none;">
-    <div class="divider-swipe"></div>
-    <div class="marker-detail-header">
-        <img src="../assets/image/superindo.svg" alt="Superindo Sampangan" class="marker-img">
-        <div class="marker-info">
-            <h1><img src="../assets/image/pinpeta.svg" alt="" class="icon-meter">Terdekat 3.6 Km</h1>
-            <h3>Superindo Sampangan</h3>
-            <p class="marker-address"><img src="../assets/image/locationpeta.svg" alt="" class="icon-address">Jl. Simongan Raya A No. IV</p>
-            <p class="marker-distance">20 Menit dari lokasimu</p>
-            <p class="marker-description">
-            Produk mendekati kedaluwarsa atau bentuk kurang sempurna, tetapi layak konsumsi dan membantu mengurangi limbah makanan.
-         </p>
+    <div class="marker-detail" id="markerDetail" style="display: none;">
+        <div class="divider-swipe"></div>
+        <div class="marker-detail-header">
+            <img src="../assets/image/superindo.svg" alt="Superindo Sampangan" class="marker-img">
+            <div class="marker-info">
+                <h1><img src="../assets/image/pinpeta.svg" alt="" class="icon-meter">Terdekat 3.6 Km</h1>
+                <h3>Superindo Sampangan</h3>
+                <p class="marker-address"><img src="../assets/image/locationpeta.svg" alt="" class="icon-address">Jl. Simongan Raya A No. IV</p>
+                <p class="marker-distance">20 Menit dari lokasimu</p>
+                <p class="marker-description">
+                Produk mendekati kedaluwarsa atau bentuk kurang sempurna, tetapi layak konsumsi dan membantu mengurangi limbah makanan.
+            </p>
+            </div>
+
+            <!-- Love Icon di dalam header -->
+            <div class="love-icon">
+                <img src="../assets/image/lovepeta.svg" alt="Love">
+            </div>
         </div>
 
-        <!-- Love Icon di dalam header -->
-    <div class="love-icon">
-        <img src="../assets/image/lovepeta.svg" alt="Love">
-    </div>
-    </div>
-
-    <div class="divider"></div> <!-- Divider -->
+        <div class="divider"></div> <!-- Divider -->
    
 
-    <!-- List Produk -->
-    <div class="product-list">
-        <div class="product-item">
-            <img src="../assets/image/detail2.svg" alt="Sayuran Organik" class="product-img">
-            <div class="product-info">
-                <h1><img src="../assets/image/pinpeta.svg" alt="" class="icon-meter">Superindo Sampangan</h1>
-                <h4>Sayuran organik daur ulang</h4>
-                <p>Sayuran sisa yang tidak layak konsumsi, tapi bermanfaat untuk pakan ternak & kompos.</p>
-                <div class="product-price">
-                    <span class="discount">50%</span>
-                    <span class="old-price">146.000</span>
-                    <span class="new-price">68.000</span>
-                    <span class="vertical-divider"></span>
-                    <span class="stock">5 kg Tersedia</span>
+        <!-- List Produk -->
+        <div class="product-list">
+            <div class="product-item">
+                <img src="../assets/image/detail2.svg" alt="Sayuran Organik" class="product-img">
+                <div class="product-info">
+                    <h1><img src="../assets/image/pinpeta.svg" alt="" class="icon-meter">Superindo Sampangan</h1>
+                    <h4>Sayuran organik daur ulang</h4>
+                    <p>Sayuran sisa yang tidak layak konsumsi, tapi bermanfaat untuk pakan ternak & kompos.</p>
+                    <div class="product-price">
+                        <span class="discount">50%</span>
+                        <span class="old-price">146.000</span>
+                        <span class="new-price">68.000</span>
+                        <span class="vertical-divider"></span>
+                        <span class="stock">5 kg Tersedia</span>
+                    </div>
+                </div>
+                            
+                <div class="wrapper">
+                    <div class="love-icon">
+                        <img src="../assets/image/lovepeta.svg" alt="Love">
+                    </div>
+                    <div class="chat-icon">
+                        <img src="../assets/image/chat.svg" alt="Chat">
+                    </div>
                 </div>
             </div>
-                           
-<div class="wrapper">
-    <div class="love-icon">
-        <img src="../assets/image/lovepeta.svg" alt="Love">
-    </div>
-        <div class="chat-icon">
-            <img src="../assets/image/chat.svg" alt="Chat">
-        </div>
-</div>
-        </div>
 
-        <div class="product-item">
-            <img src="../assets/image/detail3.svg" alt="Buah Organik" class="product-img">
-            <div class="product-info">
-                <h1><img src="../assets/image/locationpeta.svg" alt="" class="icon-meter">Superindo Sampangan</h1>
-                <h4>Buah-buahan organik daur ulang</h4>
-                <p>Buah-buahan sisa yang tidak layak konsumsi, tapi bermanfaat untuk pakan ternak & kompos.</p>
-                <div class="product-price">
-                    <span class="discount">50%</span>
-                    <span class="old-price">45.000</span>
-                    <span class="new-price">22.500</span>
-                    <span class="vertical-divider"></span>
-                    <span class="stock">1 kg Tersedia</span>
+            <div class="product-item">
+                <img src="../assets/image/detail3.svg" alt="Buah Organik" class="product-img">
+                <div class="product-info">
+                    <h1><img src="../assets/image/locationpeta.svg" alt="" class="icon-meter">Superindo Sampangan</h1>
+                    <h4>Buah-buahan organik daur ulang</h4>
+                    <p>Buah-buahan sisa yang tidak layak konsumsi, tapi bermanfaat untuk pakan ternak & kompos.</p>
+                    <div class="product-price">
+                        <span class="discount">50%</span>
+                        <span class="old-price">45.000</span>
+                        <span class="new-price">22.500</span>
+                        <span class="vertical-divider"></span>
+                        <span class="stock">1 kg Tersedia</span>
+                    </div>
+                </div>
+                            
+            <div class="wrapper">
+                <div class="love-icon">
+                    <img src="../assets/image/lovepeta.svg" alt="Love">
+                </div>
+                <div class="chat-icon">
+                    <img src="../assets/image/chat.svg" alt="Chat">
+                </div>
             </div>
-            </div>
-                         
-<div class="wrapper">
-    <div class="love-icon">
-        <img src="../assets/image/lovepeta.svg" alt="Love">
-    </div>
-        <div class="chat-icon">
-            <img src="../assets/image/chat.svg" alt="Chat">
         </div>
-</div>
-
         </div>
     </div>
-</div>
 
 
      <!-- Tombol di pojok kanan bawah -->
@@ -163,5 +164,4 @@
 <script src="../assets/js/script.js"></script>
 
 </body>
-
 </html>

@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.add("fade-out");
             setTimeout(() => {
                 window.location.href = link.href;
-            }, 500); // Harus sesuai dengan durasi animasi CSS
+            }, 500);
         });
     });
 });
+
+

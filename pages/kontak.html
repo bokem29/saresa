@@ -11,7 +11,8 @@
     <script src="/assets/js/index.js" defer></script>
 </head>
 <body>
-    <div class="overlay"></div> <!-- Overlay untuk transisi -->
+    <!-- Overlay untuk transisi -->
+    <div class="overlay"></div>
             <!-- Sidebar Menu -->
             <div class="sidebar" id="sidebar">
                 <button class="close-btn" onclick="toggleMenu()">
@@ -84,6 +85,8 @@
                     </a>
                 </ul>
             </div>
+
+            <!-- Navbar -->
             <nav class="navbar">
                 <div class="hamburger" onclick="toggleMenu()">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -137,6 +140,8 @@
                     </div>
                 </a>
             </nav>
+
+    <!-- Header -->
     <header class="hero">
         <div class="hero-content">
             <h1>Ayo <span class="highlight">berbicara.</span></h1>
@@ -146,7 +151,8 @@
             <img src="../assets/image/kontakimg.png" alt="Customer Shopping" width="350">
         </div>
     </header>
-    
+
+    <!-- Kontak -->
     <section class="contact-info">
         <h2 class="title-contact">Kontak Informasi</h2>
         <div class="info-container">
@@ -174,31 +180,30 @@
         </div>
     </section>
 
+    <!-- Form -->
     <section class="contact">
         <div class="contact-container">
-        <div class="contact-content">
-            <h2><span class="highlight">Informasi</span> Kontak</h2>
-            <p>Ada pertanyaan atau butuh bantuan? Kami di sini untuk membantu! Jangan ragu untuk menghubungi kami melalui saluran berikut:</p>
-            
-            <form class="contact-form">
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Nama" required>
-                <div class="textarea-container">
-                    <textarea placeholder="Pesan" required></textarea>
-                    <button type="submit">Kirim</button>
+            <div class="contact-content">
+                <h2><span class="highlight">Informasi</span> Kontak</h2>
+                <p>Ada pertanyaan atau butuh bantuan? Kami di sini untuk membantu! Jangan ragu untuk menghubungi kami melalui saluran berikut:</p>
+                
+                <form class="contact-form">
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Nama" required>
+                    <div class="textarea-container">
+                        <textarea placeholder="Pesan" required></textarea>
+                        <button type="submit">Kirim</button>
+                    </div>
+                </form>
+                <div class="contact-image2">
+                    <img src="../assets/image/mobila-form.svg" alt="Ilustrasi Orang">
                 </div>
-            </form>
-            <div class="contact-image2">
-                <img src="../assets/image/mobila-form.svg" alt="Ilustrasi Orang">
+            </div>
+            <div class="contact-image">
+                <img src="../assets/image/kontakpeople.svg" alt="Ilustrasi Orang">
             </div>
         </div>
-        <div class="contact-image">
-            <img src="../assets/image/kontakpeople.svg" alt="Ilustrasi Orang">
-        </div>
-    </div>
     </section>
-
-    
     <script src="/assets/js/index.js"></script>
 </body>
 </html>

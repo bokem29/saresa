@@ -1,10 +1,11 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Mencegah scroll horizontal */
+    overflow-x: hidden;
     width: 100%;
     height: 100%;
     color: #fff;
+    scrollbar-width: none;
 }
 
 .background-container {
@@ -291,7 +292,7 @@ html, body {
     color: #005057;
     text-decoration: underline;
     text-decoration-color: #C1DC00;
-    font-weight: bold;
+    font-weight: 800;
 }
 .pilihanmu{
     font-style: italic;
@@ -456,9 +457,9 @@ html, body {
     gap: 20px;
 }
 .profil-green-line {
-    width: 100%; /* Sesuaikan dengan lebar container */
-    height: 25px; /* Ketebalan garis */
-    background-color: #005057; /* Warna hijau */
+    width: 100%; 
+    height: 25px; 
+    background-color: #005057; 
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }
@@ -514,12 +515,13 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-.menu-container h1 {
-   color: #005057;
-   font-weight: 600;
-   font-size: 30px;
-   text-align: center;
-   margin-bottom: 50px;
+.header-menu{
+    color: #005057;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 50px;
+    padding: 0px 80px;
 }
 .menu-carousel-container{
     position: relative;
@@ -536,16 +538,16 @@ html, body {
     display: flex;
     flex-direction: row;
     transition: transform 0.5s ease;
-    padding: 0px 50px 0px 50px;
+    padding: 20px 80px 0px 80px;
     width: 100%;
-    height: auto;
+    height: 100%;
     overflow-x: auto;
     scrollbar-width: none;
+    gap: 20px;
 }
 .item-menu{
     transition: all 0.5s ease;
     cursor: pointer;
-    transform: scale(0.9);
     flex-shrink: 0.1;
     display: flex;
     flex-direction: column;
@@ -555,6 +557,10 @@ html, body {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     overflow-x: hidden;
+}
+.item-menu:hover{
+    transition: all 0.5s ease;
+    transform: translateY(-8px);
 }
 .like {
     height: 40px;
@@ -908,10 +914,13 @@ html, body {
     .heading {
         margin-top: 50px;
         font-size: 2.7rem;
-        font-weight: bold;
+        font-weight: 600;
         margin-bottom: 20px;
         line-height: 1.2;
         color: #005057;
+    }
+    .semesta {
+        font-weight: 800;
     }
     .subheading{
         font-size: 20px;
@@ -980,7 +989,7 @@ html, body {
 
     .carousel-slide {
         left: 350px;
-        min-width: calc(87% - 10px); /* Agar 3 slide muat dalam satu layar */
+        min-width: calc(87% - 10px); 
         flex: 1;
         transform: scale(0.95);
     }
@@ -1001,7 +1010,7 @@ html, body {
     }
     .container-resto {
         height: auto;
-        margin-bottom: 40px;
+        margin-bottom: 0px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -1077,7 +1086,7 @@ html, body {
         padding: 0;
     }
     .carousel-toko{
-        padding: 0 20px;
+        padding: 0 5px;
     }
     .item-toko img{
         width: 300px;
@@ -1087,18 +1096,24 @@ html, body {
         padding: 20px 0px 60px 0px;
     }
     .menu-container h1 {
-       font-size: 25px;
-       margin-bottom: 60px;
+       font-size: 20px;
+       margin-bottom: 0px;
+       display: flex;
+       align-items: flex-start;
+       padding: 0px 40px;
     }
     .menu-container{
         height: auto;
+    }
+    .menu-carousel {
+        padding: 20px 20px 0px 20px;
+        gap: 20px;
     }
     .menu-carousel-container{
         padding: 0px;
     }
     .item-menu{
         transition: all 0.5s ease;
-        transform: scale(0.9);
         flex-shrink: 0.1;
         display: flex;
         flex-direction: column;
@@ -1146,10 +1161,12 @@ html, body {
     .menu-description{
         padding: 0px 10px 0px 10px;
         margin-bottom: 10px;
+        text-align: left;
     }
     .menu-description h1{
         font-size: 20px;
         margin-bottom: 5px;
+        padding: 0px;
     }
     .menu-description p{
         color: #000;
@@ -1243,7 +1260,6 @@ html, body {
     }
 }
 
-/* tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     .content {
         display: flex;
