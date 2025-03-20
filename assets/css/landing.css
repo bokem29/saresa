@@ -48,17 +48,11 @@ body::-webkit-scrollbar{
     border-bottom-left-radius: 50px;
     width: 90%;
     max-width: 1800px;
-    background-color: rgba(97, 97, 97, 0.226);
-    backdrop-filter: blur(9px);
+    background-color: rgba(54, 54, 54, 0.614);
+    backdrop-filter: blur(8px);
     transition: all 0.2s ease-in-out;
 }
-.navbar.scrolled {
-    background-color: white;
-    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
-  }
-
 .navbar:hover {
-    background-color: rgba(97, 97, 97, 0.226);
     backdrop-filter: blur(14px);
 }
 .nav-links {
@@ -72,24 +66,19 @@ body::-webkit-scrollbar{
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
-    transition: all 0.4s ease;
-}
-.navbar.scrolled .nav-links a {
-    color: var(--ocean-teal); 
-  }
-
-.navbar.scrolled .logo svg {
-    filt 
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--ocean-teal);
-        transition: all 0.2s ease;
+    transform: translateY(-4px);
+    color: var(--lemon-zest);
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
 }
+
 .dropdown-content a:hover{
     color: #005057;
     font-weight: var(--font-semibold);
@@ -100,17 +89,17 @@ body::-webkit-scrollbar{
     background: none;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 3px;
     border: none;
-    color: white;
+    color: white;   
     transition: color 0.3s ease;
     font-size: 16px;
     cursor: pointer;
 }
-.navbar.scrolled .dropbtn {
-    color: black;
-  }
-  
+
+
+
+
 .dropbtn:hover {
     color: var(--lemon-zest);
     transition: 0.3s ease;
@@ -139,8 +128,6 @@ body::-webkit-scrollbar{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-
 
 .daftar-btn {
     display: flex;
@@ -205,6 +192,7 @@ body::-webkit-scrollbar{
     align-items: center;
     right: 20px;
 }
+
 .navbar-profile{
     display: flex;
     flex-direction: row;
